@@ -44,12 +44,13 @@ def main() -> int:
         print("Nao encontrei: " + ", ".join(faltando))
         return 1
 
-    nome = f"g29-gtav-{date.today():%Y-%m-%d}.zip"
+    pasta = "VIRTUAL CONTROLER GTAV"
+    nome = f"{pasta} {date.today():%Y-%m-%d}.zip"
     destino = os.path.join(os.path.dirname(AQUI), nome)
 
     with zipfile.ZipFile(destino, "w", zipfile.ZIP_DEFLATED) as z:
         for arquivo in INCLUIR:
-            z.write(os.path.join(AQUI, arquivo), f"g29-gtav/{arquivo}")
+            z.write(os.path.join(AQUI, arquivo), f"{pasta}/{arquivo}")
 
     tamanho = os.path.getsize(destino) / 1024
     print(f"Pronto: {destino}  ({tamanho:.0f} KB)")
