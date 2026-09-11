@@ -8,6 +8,13 @@ force feedback sao os mesmos da linha de comando. Aqui so muda o jeito de
 manipular - tudo ao vivo, com o volante na mao.
 
     python g29_gui.py
+
+Copyright (C) 2026 Gui Rios
+
+Este programa e software livre: voce pode redistribui-lo e/ou modifica-lo sob
+os termos da GNU General Public License versao 3, publicada pela Free Software
+Foundation. Ele e distribuido SEM NENHUMA GARANTIA. Veja o arquivo LICENSE ou
+<https://www.gnu.org/licenses/>.
 """
 from __future__ import annotations
 
@@ -1143,9 +1150,11 @@ class App(tk.Tk):
         self.abas.add(pagina, text="  Instalacao  ")
         aba = pagina.interno
 
-        ttk.Label(aba, style="Dica.TLabel",
-                  text=f"Virtual Controller GTA V - versao {VERSAO}"
-                  ).pack(anchor="w", pady=(0, 8))
+        ttk.Label(aba, style="Dica.TLabel", justify="left", text=(
+            f"Virtual Controller GTA V - versao {VERSAO}\n"
+            "Software livre sob GNU GPL v3 - Copyright (C) 2026 Gui Rios. "
+            "Veja o arquivo LICENSE."
+        )).pack(anchor="w", pady=(0, 8))
 
         grupo = ttk.LabelFrame(aba, text=" Situacao deste computador ",
                                padding=(14, 10))

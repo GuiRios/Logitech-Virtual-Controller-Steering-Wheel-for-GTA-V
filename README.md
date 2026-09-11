@@ -365,4 +365,22 @@ no motor conserta os dois caminhos.
 
 ## Licença
 
-Uso livre. Não é afiliado à Logitech nem à Rockstar Games.
+**GNU General Public License v3.0** — veja [LICENSE](LICENSE).
+
+Copyright (C) 2026 Gui Rios
+
+O que isso significa na prática:
+
+- **Pode usar, estudar, modificar e redistribuir** à vontade, inclusive
+  comercialmente;
+- **quem distribuir uma versão modificada é obrigado a publicar o código-fonte**
+  dela sob esta mesma licença;
+- a **autoria original precisa ser preservada** — ninguém pode republicar isto
+  como se fosse obra própria.
+
+A escolha da GPL é deliberada: este projeto nasceu porque existe gente vendendo
+essa funcionalidade como mod fechado. A GPL mantém o trabalho aberto e impede
+que alguém o feche de novo.
+
+Não é afiliado à Logitech nem à Rockstar Games. Os nomes são usados apenas para
+identificar a compatibilidade.

@@ -1,4 +1,11 @@
-"""Checagem rapida do volante SEM abrir nada em exclusivo (nao rouba o G29)."""
+"""Checagem rapida do volante SEM abrir nada em exclusivo (nao rouba o G29).
+Copyright (C) 2026 Gui Rios
+
+Este programa e software livre: voce pode redistribui-lo e/ou modifica-lo sob
+os termos da GNU General Public License versao 3, publicada pela Free Software
+Foundation. Ele e distribuido SEM NENHUMA GARANTIA. Veja o arquivo LICENSE ou
+<https://www.gnu.org/licenses/>.
+"""
 import ctypes
 from ctypes import wintypes
 

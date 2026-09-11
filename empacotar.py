@@ -12,6 +12,13 @@ Leva so o que a outra pessoa precisa. Fica de fora, de proposito:
   *.bak, backups, __pycache__, sdk/   ruido.
 
     python empacotar.py
+
+Copyright (C) 2026 Gui Rios
+
+Este programa e software livre: voce pode redistribui-lo e/ou modifica-lo sob
+os termos da GNU General Public License versao 3, publicada pela Free Software
+Foundation. Ele e distribuido SEM NENHUMA GARANTIA. Veja o arquivo LICENSE ou
+<https://www.gnu.org/licenses/>.
 """
 from __future__ import annotations
 
@@ -35,6 +42,7 @@ INCLUIR = [
     "icone.ico",
     "requirements.txt",
     "README.md",
+    "LICENSE",
     "LEIA-PRIMEIRO.txt",
 ]
 
