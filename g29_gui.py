@@ -24,7 +24,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from g29_gtav import (  # noqa: E402
     BUTTON_NAMES, CONFIG_PATH, DEFAULT_CONFIG, Gamepad, SdlFFB, VirtualPad,
-    Wheel, carregar_estado, clamp, gravar_estado, inicio_do_processo,
+    VERSAO, Wheel, carregar_estado, clamp, gravar_estado, inicio_do_processo,
     deduzir_repouso, graus_girados, janela_do_jogo, joystick_conectado,
     load_config, map_pedal, map_steering, save_config, xinput_lib, xinput_read,
     xinput_slots,
@@ -900,7 +900,7 @@ class PainelBotoes:
 class App(tk.Tk):
     def __init__(self):
         super().__init__()
-        self.title("G29 -> GTA V")
+        self.title(f"Virtual Controller GTA V  v{VERSAO}")
         self.minsize(900, 560)
         self.configure(bg=COR_JANELA)
         self._aplicar_icone()
@@ -1142,6 +1142,10 @@ class App(tk.Tk):
         pagina = AreaRolavel(self.abas)
         self.abas.add(pagina, text="  Instalacao  ")
         aba = pagina.interno
+
+        ttk.Label(aba, style="Dica.TLabel",
+                  text=f"Virtual Controller GTA V - versao {VERSAO}"
+                  ).pack(anchor="w", pady=(0, 8))
 
         grupo = ttk.LabelFrame(aba, text=" Situacao deste computador ",
                                padding=(14, 10))
@@ -2033,9 +2037,11 @@ class App(tk.Tk):
         elif time.time() >= getattr(self, "_status_ate", 0):
             slot = self.worker.slot_nosso
             onde = f"slot {slot}" if slot is not None else "sem controle"
+            # so o nome do arquivo: o caminho completo carrega o nome de
+            # usuario do Windows, e isso acaba em capturas de tela publicas
             self.var_status.set(
                 f"laco: {inst['hz']:.0f} Hz   |   controle virtual: {onde}"
-                f"   |   {CONFIG_PATH}")
+                f"   |   {os.path.basename(CONFIG_PATH)}   |   v{VERSAO}")
 
         self._id_tick = self.after(33, self._tick)
 

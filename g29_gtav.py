@@ -34,6 +34,8 @@ try:
 except Exception:
     pass
 
+VERSAO = "1.0.0"
+
 HERE = os.path.dirname(os.path.abspath(__file__))
 CONFIG_PATH = os.path.join(HERE, "config.json")
 

@@ -11,9 +11,18 @@ arquivo do jogo.
 mas suporte a XInput excelente — então a aplicação lê o volante e cria um
 controle de Xbox virtual, que o jogo enxerga como um gamepad comum.
 
-> **Comece por aqui:** baixe o projeto, dê um duplo clique em
-> **`DASHBOARD-GTAV.bat`** e siga a aba *Instalação*. Ela instala as
-> dependências, o driver do controle virtual e guia a calibragem.
+## Baixar
+
+**[⬇ Baixar a versão 1.0.0 (.zip)](https://github.com/GuiRios/Logitech-Virtual-Controller-Steering-Wheel-for-GTA-V/raw/main/VIRTUAL%20CONTROLER%20GTAV%20v1.0.0.zip)**
+
+Descompacte em qualquer pasta e dê um duplo clique em **`DASHBOARD-GTAV.bat`**.
+A aba *Instalação* cuida do resto: instala as dependências, o driver do controle
+virtual e guia a calibragem.
+
+A única coisa que precisa estar no computador antes é o
+[Python 3.9+ 64 bits](https://www.python.org/downloads/) — marque
+*Add Python to PATH* na primeira tela do instalador. Se faltar, o próprio
+atalho avisa e oferece abrir a página.
 
 ## Como funciona
 

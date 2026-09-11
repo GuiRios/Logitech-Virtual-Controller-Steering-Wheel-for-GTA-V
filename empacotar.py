@@ -18,9 +18,10 @@ from __future__ import annotations
 import os
 import sys
 import zipfile
-from datetime import date
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, AQUI)
+from g29_gtav import VERSAO  # noqa: E402
 
 # Um atalho so. Os .bat numerados (instalar, calibrar, jogar) saiam do pacote
 # de proposito: quatro arquivos na pasta confundem quem nao e tecnico, e nao ha
@@ -45,8 +46,12 @@ def main() -> int:
         return 1
 
     pasta = "VIRTUAL CONTROLER GTAV"
-    nome = f"{pasta} {date.today():%Y-%m-%d}.zip"
-    destino = os.path.join(os.path.dirname(AQUI), nome)
+    # versao no nome, nao data: quem baixa precisa saber se tem a versao mais
+    # nova, e uma data nao diz isso sem ir conferir o repositorio
+    nome = f"{pasta} v{VERSAO}.zip"
+    # dentro do proprio projeto: assim o zip e versionado junto e fica
+    # baixavel direto pelo GitHub, sem depender de anexo de release
+    destino = os.path.join(AQUI, nome)
 
     with zipfile.ZipFile(destino, "w", zipfile.ZIP_DEFLATED) as z:
         for arquivo in INCLUIR:
