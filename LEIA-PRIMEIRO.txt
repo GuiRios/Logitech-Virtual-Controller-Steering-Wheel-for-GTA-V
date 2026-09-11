@@ -1,0 +1,80 @@
+G29 para GTA V - comece por aqui
+=================================
+
+Faz o volante Logitech G29 funcionar bem no Grand Theft Auto V, com pedais
+analogicos de verdade e force feedback. Nao e mod: nao altera nenhum arquivo
+do jogo nem injeta nada nele. O que ele faz e ler o volante e criar um
+controle de Xbox virtual, que o jogo enxerga como um gamepad comum.
+
+Funciona no GTA V Legacy e no Enhanced.
+
+
+SO EXISTE UM ARQUIVO PARA ABRIR
+-------------------------------
+
+    DASHBOARD-GTAV.bat
+
+De um duplo clique nele. A janela que abrir cuida de todo o resto: instalar
+o que falta, calibrar o volante e rodar a ponte.
+
+
+ANTES, SO UMA COISA: O PYTHON
+-----------------------------
+
+Esta e a unica peca que a aplicacao nao consegue instalar sozinha, porque ela
+mesma e um programa Python.
+
+    https://www.python.org/downloads/
+
+IMPORTANTE: na PRIMEIRA tela do instalador, marque a caixinha
+"Add Python to PATH". Ela fica embaixo e e facil passar batido.
+
+Se voce abrir o DASHBOARD-GTAV.bat sem ter o Python, ele explica isso e oferece
+abrir a pagina de download.
+
+Voce tambem precisa do Logitech G HUB (ou do antigo Logitech Gaming Software)
+instalado, com o volante ligado e reconhecido.
+
+
+DENTRO DA JANELA
+----------------
+
+Aba "Instalacao"  - mostra o que falta neste computador e instala com um
+                    clique: as bibliotecas e o driver do controle virtual.
+                    O Windows vai pedir confirmacao para o driver: aceite.
+                    E o mesmo driver do DS4Windows, assinado e gratuito.
+                    Depois de instalar, clique em "Reiniciar a aplicacao".
+
+Aba "Calibragem"  - seis passos guiados. O assistente descobre sozinho qual
+                    eixo e o volante e qual e cada pedal. Termine clicando
+                    em "Salvar calibragem".
+
+Aba "Diagnostico" - "Rodar diagnostico" confere a cadeia inteira. Voce quer
+                    ver [ok] em tudo.
+
+Aba "Jogar"       - acompanhe ao vivo o que esta indo para o jogo.
+
+Aba "Ajustes"     - o ajuste que mais muda a sensacao e a "Trava suave".
+                    Com 900 graus o carro parece nao responder. Comece em 360.
+
+
+A ORDEM IMPORTA
+---------------
+
+Deixe esta janela aberta e SO ENTAO abra o GTA V.
+
+O jogo so reconhece controles que ja existiam quando ele iniciou. Se voce
+abrir o jogo primeiro, a propria aplicacao mostra um aviso explicando.
+
+
+SE ALGO NAO FUNCIONAR
+---------------------
+
+- Aba "Diagnostico": ela diz exatamente o que esta faltando.
+- Botao "Reconectar tudo" no topo: refaz as ligacoes sem fechar nada.
+- Se o volante nao reportar nada, rode checar-volante.py: ele le pelo
+  Windows, sem abrir nada em modo exclusivo.
+- Se abrir o jogo pela Steam, desative o Steam Input para o GTA V
+  (Propriedades -> Controle -> Desativar entrada da Steam).
+
+O README.md explica cada ajuste em detalhe.

@@ -1,0 +1,13 @@
+# pessoal de cada maquina: calibragem, ajustes e memoria de slot XInput
+config.json
+config.json.*
+estado.json
+
+# zips gerados pelo empacotar.py
+*.zip
+
+# caminho herdado do SDK da Logitech, nao usado mais
+sdk/
+
+__pycache__/
+*.pyc
